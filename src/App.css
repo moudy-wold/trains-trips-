@@ -1,38 +1,240 @@
-.App {
-  text-align: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+.header{
+    width:100%;
+    height: 250px;
+}
+.header img{
+    width:100%;
+    height:100%
+}
+/* Start  Data Table */
+
+.parent{
+    width:auto;
+    overflow:visible;
+    border-bottom:1px solid #EEE;
+    display:flex;
+    padding:10px;
+    line-height:34px;   
+    align-items: center;
+}
+.parent>div{
+    flex:1;
+    font-size:19px;
+    text-align: center;
+    margin:auto 10px;
+    padding-left:6px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn{
+    padding:1px 22px;
+    height: 36px;
+    border-radius:10px;
+    cursor:pointer;
+    outline: none;
+    border:none;
+    background-color:#715658;
+    font-size:18px;
+    transition:all .1s linear;
+    color:rgb(225, 225, 225);
+}
+.btn:hover{
+color:#FFF;
+}
+.btn:active{
+    color:#715658;
+    background-color:#eee;
+    transform:translateY(2px)
+}
+/* End Data Table */
+
+/* Start Search Box */
+.main-search{
+    width:100%;
+    padding:40px 40px 15px;
+    background-color:#333;   
+}
+.main-search form{
+    display:flex;
+    background-color:#fff;
+    align-items: center;
+    height:85px;
+    justify-content: space-around;
+    border-radius:10px;
+}
+.search-city .input{
+    position: relative;
+    z-index:2;
+}
+.input-box {
+    width:30%
+}
+.input{
+    width:100%
+}
+.search-passenger{
+    width:19%;
+}
+.btns{
+    display: flex;
+    width:15%;
+    justify-content: space-around;
+}
+.close-search-box{
+    width:fit-content;
+    margin-left: -15px;
+    cursor:pointer;
+    border: 1px solid #333;
+    font-size: 20px;
+    border-radius:10px;
+    padding:5px 3px;
+    justify-content: center;
+    display:flex;
+    flex-wrap:wrap;
+    line-height:30px;
+    transition:all .1s linear;
+    user-select:none;
+}
+.close-search-box:active{
+    transform:translateY(3px)
+}
+.close-search-box span{
+    text-align: center;
+    display:block;
+    width:100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.serch-btn{
+    padding:30px 20px;
+    font-size:25px;
+    background-color: #fea400;
+    display:flex;
+    align-items: center;
 }
+/* End Search Box */
 
-.App-link {
-  color: #61dafb;
+/* Start Dialog */
+
+
+.info-inputs{
+    width:95%;
+    margin:10px auto;
+    border:1px solid #333;
+    border-radius:10px;
+    padding:20px;
+    
 }
+.info-inputs>div{
+    width:100%;
+    margin-bottom:10px;
+}
+.info-inputs input{
+    width:49%;
+    margin:8px 2px;
+    padding:10px;
+    font-size:20px;
+    outline:none;
+    border-radius:10px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.info-inputs input[type="number"]{
+    display:block
+}
+.payment-details{
+    padding:20px;
+    border:1px solid #333;
+    width:95%;
+    margin:10px auto;
+    border-radius: 10px;
+}
+.payment-details h3{
+    margin-top:15px;
+}
+.visa-menu{
+    display:flex;
+}
+.visa-menu li{
+    list-style:none;
+ margin:10px 15px;
+ border-bottom:1px solid #333;
+ border-radius:8px;
+ padding:5px ;
+ cursor:pointer;
+}
+.visa-menu li svg{
+    font-size:20px;
+}
+.info-card>div{width:100%;display: flex;}
+.card-number-input{
+    margin:10px auto;
+    width:90%!important;
+}
+.ccv-card-input,.date-card-input{
+    width:45%!important;
+    margin:6px;
+    display: inline;
+}
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper{
+    max-width:800px!important;
+}
+.parent div:first-child{
+    border-left:none;
+}
+ .parent>div{
+    border-left:1px solid #DDD;
+}
+.dialog .btn{
+    width:200px;
+    margin:20px auto;
+    padding:8px 10px 14px;
+    font-size:19px;
+    background-color: #0fc26e;
+    color:#FFF;
+}
+/* End Dialog */
+
+
+@media (max-width:567px){
+    .main-search form{
+        height:370px;
+        display:block;
+        padding-top:10px;
+    }
+    .input-box {
+        width:70%;
+        display: block;
+        margin:40px 25px 10px;
+    }
+     
+    .search-passenger{
+        width:39%;
+        margin:28px;
+        margin-top:8px;    
+    }
+    .btns{
+        display: flex;
+        width:100%;
+        justify-content: space-around;
+    }
+    .serch-btn{
+        margin:10px auto;
+    }
+    .close-search-box{
+        margin:10px auto;
+    }
+    .showdata .parent .btn{
+        width:100%!important;
+        display: block;
+    }
+    .info-inputs input{
+        width:99%;}
 }
